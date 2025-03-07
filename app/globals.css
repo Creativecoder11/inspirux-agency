@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home-hero {
+  background-image: url(/assets/inspirux-hero-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (max-width: 500px) {
+  .home-hero {
+    background-image: url(/assets/inspirux-hero-mobile.png);
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #101012;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b3ec11;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b3ec11;
+}
+
+::selection {
+  color: #101012;
+  background: #b3ec11;
+}
+
+.signal-line-link {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.signal-line-link::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+  bottom: 2px;
+  left: 0;
+  transform: translateX(-120%);
+  transition: 0.5s;
+}
+
+.signal-line-link:hover::before {
+  transform: translateX(0%);
+}
+
+.text-reveal {
+  display: inline-block;
+}
+
+.screen-loader {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.line-bottom {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.line-bottom::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #b3ec11;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-120%);
+  transition: 0.8s;
+}
+
+.line-bottom:hover::before {
+  transform: translateX(0%);
+}
+
+.line-bottom:hover .rotate-icon {
+  transform: rotate(-45deg);
+  transition: 0.5s;
+}
+
+.rotate-icon {
+  transition: 0.5s;
+}
+
+.featured-image {
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  overflow: hidden;
+  /* border-radius: 16px; */
+}
+.featured-image img {
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  /* border-radius: 12px; */
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  clip-path: inset(0%);
+}
+
+.featured-image:hover img {
+  transform: scale(1.03);
+  clip-path: inset(1.5%);
+}
+
+.featured-image:hover {
+  transform: scale(0.97);
+}
+
+.featured-image-clip {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.show-social-image > div {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.show-social-image span:hover + div {
+  opacity: 1;
+}
+
+.mail-arrow {
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.mail-address:hover .mail-arrow {
+  transform: rotate(90deg);
+}
+
+#mobile-menu {
+  clip-path: circle(0% at 100% 0%);
+}
